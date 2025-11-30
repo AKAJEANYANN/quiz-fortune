@@ -7,7 +7,7 @@
         </div>
       </div>
       
-      <h3 class="mb-1">QuizWahoo!</h3>
+      <h3 class="mb-1">QuizFortune!</h3>
       <p class="text-muted mb-2 x-small">Play. Win. Repeat!</p>
 
       <div class="text-start mb-2">
