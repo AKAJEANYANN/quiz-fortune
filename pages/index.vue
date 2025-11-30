@@ -16,7 +16,7 @@
           v-model="phone" 
           type="tel" 
           class="form-control form-control-sm" 
-          placeholder="+241 XX XX XX XX"
+          placeholder="+225 XX XX XX XX"
         >
       </div>
 
