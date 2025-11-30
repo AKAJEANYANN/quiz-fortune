@@ -1,30 +1,30 @@
 <template>
   <div class="page-container flex-column">
     <div class="header-section text-center mb-2">
-      <div class="welcome-banner bg-white p-2 rounded-3 shadow-sm d-flex justify-content-between align-items-center mb-2 mx-auto" style="max-width: 700px; width: 100%">
-        <div class="text-start">
-          <h4 class="h6 mb-0">
-            Bienvenue 
-            <ClientOnly>
-              <span class="phone-number">{{ formattedPhone }}</span>
-            </ClientOnly>
-          </h4>
-          <p class="text-muted mb-0 xx-small" style="margin-right:1rem;">Choisissez un coupon</p>
-        </div>
-        <div class="stats d-flex gap-2 text-center">
-          <div>
-            <div class="text-muted xx-small"><i class="bi bi-trophy"></i> Gains</div>
-            <div class="fw-semibold text-primary xx-small">{{ totalEarnings }} F CFA</div>
+      <div class="welcome-banner bg-white p-2 rounded-3 shadow-sm mb-2 mx-auto" style="max-width: 700px; width: 100%">
+        <div class="d-flex justify-content-between align-items-start w-100">
+          <div class="text-start flex-grow-1">
+            <div class="d-flex align-items-center gap-1 mb-0">
+              <span class="welcome-text">Bienvenue</span>
+              <ClientOnly>
+                <span class="phone-number">{{ formattedPhone }}</span>
+              </ClientOnly>
+            </div>
+            <p class="text-muted mb-0 xx-small">Choisissez un coupon</p>
           </div>
-          <div>
-            <div class="text-muted xx-small"><i class="bi bi-star"></i> Points</div>
-            <div class="fw-semibold text-info xx-small">{{ totalPoints }}</div>
-          </div>
-          <div>
-            <div class="text-muted xx-small">Parties</div>
-            <div class="fw-semibold xx-small">{{ gamesPlayed }}</div>
-          </div>
-          <div>
+          <div class="stats-container d-flex gap-2 align-items-center">
+            <div class="stat-item">
+              <div class="text-muted xx-small"><i class="bi bi-trophy"></i></div>
+              <div class="fw-semibold text-primary xx-small">{{ totalEarnings }}</div>
+            </div>
+            <div class="stat-item">
+              <div class="text-muted xx-small"><i class="bi bi-star"></i></div>
+              <div class="fw-semibold text-info xx-small">{{ totalPoints }}</div>
+            </div>
+            <div class="stat-item">
+              <div class="text-muted xx-small"><i class="bi bi-controller"></i></div>
+              <div class="fw-semibold xx-small">{{ gamesPlayed }}</div>
+            </div>
             <div class="settings-icon">
               <i class="bi bi-gear-fill"></i>
             </div>
@@ -238,9 +238,24 @@ const selectAndPlay = (coupon) => {
 }
 
 .phone-number {
-  font-size: 0.65rem;
+  font-size: 0.5rem;
   font-weight: 500;
-  margin-right: 1rem;
+  white-space: nowrap;
+}
+
+.welcome-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stats-container {
+  flex-shrink: 0;
+}
+
+.stat-item {
+  text-align: center;
+  min-width: 35px;
 }
 
 .settings-icon {
@@ -252,11 +267,44 @@ const selectAndPlay = (coupon) => {
   font-size: 1.1rem;
   transition: all 0.3s ease;
   padding: 4px;
+  flex-shrink: 0;
 }
 
 .settings-icon:hover {
   color: var(--secondary-color);
   transform: rotate(90deg);
+}
+
+/* Responsive pour mobile */
+@media (max-width: 576px) {
+  .welcome-banner {
+    padding: 0.75rem !important;
+  }
+  
+  .phone-number {
+    font-size: 0.5rem;
+  }
+  
+  .welcome-text {
+    font-size: 0.75rem;
+  }
+  
+  .stats-container {
+    gap: 0.5rem !important;
+  }
+  
+  .stat-item {
+    min-width: 30px;
+  }
+  
+  .xx-small {
+    font-size: 0.6rem;
+  }
+  
+  .settings-icon {
+    font-size: 1rem;
+    padding: 2px;
+  }
 }
 
 .btn-light {
