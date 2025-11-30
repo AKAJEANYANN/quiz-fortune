@@ -72,6 +72,7 @@ body {
 
 .btn-primary {
   background-color: var(--primary-color); /* Lighter blue from design */
+  color: white;
   border: none;
   border-radius: var(--btn-radius);
   padding: 12px 24px;
@@ -82,6 +83,7 @@ body {
 
 .btn-primary:hover {
   background-color: var(--secondary-color);
+  color: white;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(var(--secondary-color), 0.4);
 }

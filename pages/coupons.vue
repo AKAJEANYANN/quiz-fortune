@@ -40,6 +40,7 @@
         <div 
           class="card coupon-card h-100 text-center p-2" 
           :class="{ 'coupon-disabled': isCouponDisabled(coupon.id), 'coupon-paid': paidCouponId === coupon.id }"
+          @click="selectAndPlay(coupon)"
         >
           <!-- Badge pour le coupon payé -->
           <div v-if="paidCouponId === coupon.id" class="paid-badge">
@@ -56,7 +57,6 @@
           </div>
 
           <button 
-            @click="selectAndPlay(coupon)" 
             class="btn btn-light w-100 fw-semibold py-1 small"
             :disabled="isCouponDisabled(coupon.id)"
           >
@@ -145,6 +145,7 @@ const selectAndPlay = (coupon) => {
   transition: transform 0.3s ease;
   border: none;
   position: relative;
+  cursor: pointer;
 }
 
 .coupon-card:hover {
