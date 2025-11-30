@@ -55,7 +55,7 @@ useHead({
 
 html, body, #__nuxt {
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 
 body {
