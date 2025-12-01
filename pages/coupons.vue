@@ -35,7 +35,7 @@
       <h5 class="mb-2 small">Choisissez Votre Coupon!</h5>
     </div>
 
-    <div class="row g-2 justify-content-center w-100" style="max-width: 1000px">
+    <div class="row g-4 justify-content-center w-100" style="max-width: 1000px">
       <div v-for="coupon in coupons" :key="coupon.id" class="col-md-4">
         <div 
           class="card coupon-card h-100 text-center p-2" 
@@ -52,7 +52,7 @@
           </div>
           
           <div class="prize-box mb-2">
-            <div class="xx-small prize-label">Prize si correct</div>
+            <div class="xx-small prize-label">Prix si correct</div>
             <div class="prize-amount">{{ coupon.prize }} F CFA</div>
           </div>
 
@@ -79,9 +79,11 @@ const paidCouponId = ref(null)
 // Accéder à localStorage uniquement côté client
 onMounted(() => {
   phone.value = localStorage.getItem('userPhone') || ''
-  const storedPaidCouponId = localStorage.getItem('paidCouponId')
-  if (storedPaidCouponId) {
-    paidCouponId.value = parseInt(storedPaidCouponId)
+  if (phone.value) {
+    const storedPaidCouponId = localStorage.getItem(`paidCouponId_${phone.value}`)
+    if (storedPaidCouponId) {
+      paidCouponId.value = parseInt(storedPaidCouponId)
+    }
   }
 })
 
@@ -305,6 +307,10 @@ const selectAndPlay = (coupon) => {
   .settings-icon {
     font-size: 1rem;
     padding: 2px;
+  }
+
+  .coupon-card .btn {
+    display: none;
   }
 }
 

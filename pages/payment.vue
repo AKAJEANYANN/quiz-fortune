@@ -63,9 +63,9 @@ const processPayment = () => {
   // Simulate payment delay
   setTimeout(() => {
     processing.value = false
-    // Marquer le coupon comme payé
-    if (selectedCoupon.value) {
-      localStorage.setItem('paidCouponId', selectedCoupon.value.id.toString())
+    // Marquer le coupon comme payé pour ce numéro spécifique
+    if (selectedCoupon.value && phone.value) {
+      localStorage.setItem(`paidCouponId_${phone.value}`, selectedCoupon.value.id.toString())
     }
     router.push('/ready')
   }, 1500)

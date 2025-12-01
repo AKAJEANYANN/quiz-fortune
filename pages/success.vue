@@ -38,8 +38,11 @@ onMounted(() => {
   if (selectedCoupon.value) {
     registerWin(selectedCoupon.value.prize)
   }
-  // Supprimer le coupon payé pour permettre de choisir à nouveau
-  localStorage.removeItem('paidCouponId')
+  // Supprimer le coupon payé pour ce numéro spécifique
+  const phone = localStorage.getItem('userPhone')
+  if (phone) {
+    localStorage.removeItem(`paidCouponId_${phone}`)
+  }
 })
 
 const getConfettiStyle = (n) => {
