@@ -16,7 +16,7 @@
       </div>
 
       <div class="text-start mb-2">
-        <label class="form-label fw-semibold x-small">Numéro Moov Money</label>
+        <label class="form-label fw-semibold x-small">Numéro Moov</label>
         <input 
           type="tel" 
           class="form-control form-control-sm" 
@@ -31,14 +31,10 @@
         </button>
         <button @click="processPayment" class="btn btn-primary flex-grow-1 py-2" :disabled="processing">
           <span v-if="processing" class="spinner-border spinner-border-sm me-2"></span>
-          {{ processing ? 'Traitement...' : 'Payer Maintenant' }}
+          {{ processing ? 'Traitement...' : 'Acheter le coupon' }}
         </button>
       </div>
 
-      <p class="text-muted xx-small mt-2 mb-0">
-        <i class="bi bi-shield-lock-fill me-1"></i>
-        Paiement sécurisé via Moov Money
-      </p>
     </div>
   </div>
 </template>

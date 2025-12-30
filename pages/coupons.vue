@@ -10,7 +10,6 @@
                 <span class="phone-number">{{ formattedPhone }}</span>
               </ClientOnly>
             </div>
-            <p class="text-muted mb-0 xx-small">Choisissez un coupon</p>
           </div>
           <div class="stats-container d-flex gap-2 align-items-center">
             <div class="stat-item">

@@ -10,9 +10,9 @@ export const useQuiz = () => {
 
     // Coupons data
     const coupons = [
-        { id: 1, price: 100, prize: 1000, color: 'primary' },
-        { id: 2, price: 250, prize: 2500, color: 'primary' },
-        { id: 3, price: 500, prize: 5000, color: 'primary' }
+        { id: 1, price: 50, prize: 500, color: 'primary' },
+        { id: 2, price: 100, prize: 1000, color: 'primary' },
+        { id: 3, price: 150, prize: 1500, color: 'primary' }
     ]
 
     const setUserPhone = (phone: string) => {

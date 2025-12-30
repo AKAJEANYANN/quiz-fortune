@@ -23,7 +23,7 @@
         <div class="col-4">
           <div class="stat-box p-2 border rounded-2 h-100 d-flex flex-column justify-content-center">
             <i class="bi bi-lightning-fill text-info small mb-0"></i>
-            <div class="xx-small fw-semibold">10s</div>
+            <div class="xx-small fw-semibold">3s</div>
           </div>
         </div>
         <div class="col-4">

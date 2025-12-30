@@ -52,8 +52,8 @@ if (!selectedCoupon.value) {
   router.push('/coupons')
 }
 
-const timeLeft = ref(10)
-const totalTime = 10
+const timeLeft = ref(3)
+const totalTime = 3
 const options = ['Paris', 'Londres', 'Berlin']
 const correctAnswer = 'Paris'
 const selectedOption = ref(null)

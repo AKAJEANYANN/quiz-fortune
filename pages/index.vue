@@ -6,9 +6,10 @@
           <i class="bi bi-trophy-fill"></i>
         </div>
       </div>
+
       
-      <h3 class="mb-1">QuizFortune!</h3>
-      <p class="text-muted mb-2 x-small">Play. Win. Repeat!</p>
+      <h3 class="mb-1">MEGA GAME</h3>
+      <p class="text-muted mb-2 x-small">Plus vous jouez et Plus vous gagnez!</p>
 
       <div class="text-start mb-2">
         <label class="form-label fw-semibold x-small">Numéro de téléphone</label>
@@ -16,7 +17,7 @@
           v-model="phone" 
           type="tel" 
           class="form-control form-control-sm" 
-          placeholder="+225 XX XX XX XX"
+          placeholder="+241 XX XX XX XX"
         >
       </div>
 
